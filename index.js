@@ -10,12 +10,13 @@ const fillSubject = (subject) => {
   predmet.textContent = (subject)
 }
 
-const predmet = fillSubject("Nejlepsi nabidka prace ever")
+//const predmet = fillSubject("Nejlepsi nabidka prace ever")
 
-const fillBody = (body, text) => {
+const fillBody = (body, text, subject) => {
   const telo = document.querySelector(".email__body");
   telo.textContent = body;
-  goodbye(text)
+  goodbye(text);
+  fillSubject(subject);
 }
 
-const telo = fillBody("tak me tu mate!", "Na shledanouuuuu, Eva")
+const telo = fillBody("tak me tu mate!", "Na shledanouuuuu, Eva", "nabidka")
